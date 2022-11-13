@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import { act } from 'react-dom/test-utils';
 
 function App() {
   const players = ['Sakib Al Hasan', 'Mushfiqur Rahim', 'Tamim Iqbal', 'Taskin Ahmed', 'Mustafizur Rahman'];
@@ -10,6 +9,12 @@ function App() {
     {name: 'Tom Cruise', movie: 'Mission Impossible'},
     {name: 'Benji', movie: 'Mission Impossible'},
     {name: 'Ehten', movie: 'Mission Impossible'},
+  ]
+
+  const products = [
+    {name: 'Laptop', Brand: 'Dell', price: 75000},
+    {name: 'Mobile', Brand: 'Samsung', price: 15000},
+    {name: 'Watch', Brand: 'Haylou', price: 3000},
   ]
   return (
     <div className="App">
@@ -31,6 +36,10 @@ function App() {
        
        {
         actors.map(actor => <Friends name={actor.name} role={actor.movie}></Friends>)
+       }
+
+       {
+        products.map(product => <Product name={product.name} price={product.price} brand={product.Brand}></Product>)
        }
 
        {/* <Friends name="Cris Evan" role="Captain America"></Friends>
@@ -58,6 +67,16 @@ function Friends (props) {
       <h3>Movie: {props.role}</h3>
     </div>
   );
+}
+
+function Product (props) {
+  return (
+    <div className='product-container'>
+      <h1>Product: {props.name}</h1>
+      <p>Price: {props.price}</p>
+      <p>Brand: {props.brand}</p>
+    </div>
+  )
 }
 
 export default App;

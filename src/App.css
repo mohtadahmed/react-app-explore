@@ -28,7 +28,7 @@
   color: #61dafb;
 }
 
-.react-container{
+.react-container {
   background-color: #61dafb;
   color: #282c34;
   padding: 10px 60px;
@@ -36,7 +36,7 @@
   border-radius: 20px;
 }
 
-.person-container{
+.person-container {
   width: 600px;
   background-color: lightseagreen;
   color: lightblue;
@@ -46,7 +46,7 @@
   border-radius: 20px;
 }
 
-.friend-container{
+.friend-container {
   width: 600px;
   background-color: darkgray;
   color: darkslateblue;
@@ -56,10 +56,21 @@
   border-radius: 20px;
 }
 
+.product-container {
+  width: 600px;
+  background-color: indigo;
+  color: antiquewhite;
+  padding: 20px 60px;
+  margin: 20px;
+  border: 2px solid chartreuse;
+  border-radius: 20px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
