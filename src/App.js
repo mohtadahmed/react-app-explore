@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { act } from 'react-dom/test-utils';
 
 function App() {
   const players = ['Sakib Al Hasan', 'Mushfiqur Rahim', 'Tamim Iqbal', 'Taskin Ahmed', 'Mustafizur Rahman'];
@@ -20,7 +21,7 @@ function App() {
         </div>
 
         {
-          players.map(player => <Person name={player}></Person>)
+          players.map(player => <Person name={player} role="Batsman"></Person>)
         }
 {/* 
        <Person name="Sakib Al Hasan" role="All-rounder"></Person>
@@ -29,7 +30,7 @@ function App() {
        <h3>Movie Person</h3>
        
        {
-        actors.map(actor => <Friends name={actor.name}></Friends>)
+        actors.map(actor => <Friends name={actor.name} role={actor.movie}></Friends>)
        }
 
        {/* <Friends name="Cris Evan" role="Captain America"></Friends>
